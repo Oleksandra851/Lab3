@@ -1,0 +1,195 @@
+/* Загальні стилі для тіла документа */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+}
+
+/* Стилі для заголовка */
+header {
+    text-align: center;
+    background-color: #4a90e2;
+    color: white;
+nav ul li {
+    display: inline-block;
+    position: relative;
+    padding: 20px;
+}
+
+/* Стилі для навігації */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: center;
+}
+
+    margin: 0 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4a90e2;
+    padding: 12px 10px;
+    border-radius: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Підменю */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: #1769ff;
+    padding: 0;
+    z-index:60;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    width: 170px;
+}
+
+/* Іконка для розкриття підменю */
+nav ul li:after {
+    content: ' ▼'; /* Знак стрілки */
+    font-size: 0.7em;
+}
+
+/* Стилі для кнопки навігації вгору */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #1769ff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 2px;
+    display: none; /* Сховати кнопку спочатку */
+    cursor: pointer;
+    z-index: 5;
+}
+
+/* Показати кнопку при прокрутці */
+body.scrolled #backToTop {
+    display: block;
+}
+
+/* Стилі для зображення */
+.image-container {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0; /* Зображення приховане */
+    transition: opacity 0.8s ease;
+}
+
+.image-container .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    z-index: 2;
+}
+
+/* Стилі для секцій */
+section {
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1300px;
+}
+
+/* Стилі для зображення */
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+id="welcome" {
+    display: block;
+    margin: 0 auto;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.image-container:hover .leftimg {
+    opacity: 1;
+}
+
+/* Кнопка вгору */
+#toTop {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background-color: #4a90e2;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+#toTop:hover {
+    opacity: 0.8;
+}
+
+/* Стилі для футера */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4a90e2;
+    color: white;
+}
+
+/* Медіа-запит для мобільних пристроїв */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 10px;
+        margin: 10px;
+    }
+
+    #toTop {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
